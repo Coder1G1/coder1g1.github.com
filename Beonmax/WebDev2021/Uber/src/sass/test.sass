@@ -1,0 +1,622 @@
+
+*
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden
+    /* transition: all 1s */
+    
+.expander 
+    .header 
+        background-color: #cec3c3
+        button.activator
+            display: inline-block
+            width: 100%;
+            height: 38px;
+            background-color: #965050
+        .caption
+            display: inline
+            font-size: 26px;
+    .content
+        overflow: hidden
+        height: 0px
+        // display: none
+    &:focus-within .content
+        height: 150px
+        // display: block
+
+.slider 
+    margin-top: 10px
+    position: relative
+    width: 100%
+    height: 200px
+    border-width: 3px
+    border-style: solid
+    *
+        transition: all 1s
+    .matrioshka
+        /** button
+            display: inline-block
+            position: absolute
+            width: 10%
+            height: 10% **/
+        display: inline-block
+        /* display: none */
+        /* position: relative */
+        position: absolute
+        left: 90%;
+        // transition: left 1s
+        top: 0
+        width: 100%
+        width: 0%
+        // transition: width 1s
+        height: 200px
+        transition: left 1s, width 1s;
+        .content
+            width: 90%
+            height: 100%
+            transition: left 1s, width 1s;
+        /** &:focus-within>.matrioshka
+            border-style: none
+            left: 10%
+            border-style: solid **/
+    .n1
+        background-color: #dba866
+        display: inline-block
+        width: 10%
+        // transition: width 1s
+        // transition: left 1s
+        transition: left 1s, width 1s;
+    .n2
+        background-color: #aec200
+    .n3
+        background-color: #a3d487
+    .n4
+        background-color: #8dc0c9
+    .matrioshka
+        &:focus-within
+            // border-style: dotted
+            left: 0%
+            // transition: left 1s
+            width: 100%
+            // transition: width 1s
+            transition: left 1s, width 1s;
+            display: inline-block
+        &:focus
+            // border-style: dashed
+            left: 10%
+            // transition: left 1s
+            width: 90%
+            // transition: width 1s
+            transition: left 1s, width 1s;
+            display: inline-block
+        &:focus>.matrioshka
+            // border-style: solid
+            left: 88.8888%
+            // transition: left 1s
+            width: 11.1111%
+            // transition: width 1s
+            transition: left 1s, width 1s;
+            display: inline-block
+
+// overflow: visible|hidden|scroll|auto|initial|inherit;
+
+.slider2 
+    margin-top: 10px
+    position: relative
+    width: 100%
+    height: 200px
+    border-width: 3px
+    border-style: solid
+    .matrioshka
+        .button
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: -40px
+            width: 40px
+            height: 40px
+            background-color: #ff0000
+            border-width: 1px
+            border-style: solid
+        display: inline-block
+        /* display: none */
+        /* position: relative */
+        position: absolute
+        left: 100%;
+        top: 0
+        /* width: 100% */
+        width: 0%
+        height: 200px
+        .content
+            width: 90%
+            height: 100%
+    &>.matrioshka 
+        /* display: inline-block */
+        width: 100%
+        left: 0%
+        &>.button
+            left: 0%
+            z-index: -1
+        &>.matrioshka 
+            &>.button
+                left: -40px
+                z-index: 1
+            .matrioshka 
+                &>.button
+                    left: -40px
+                    z-index: -1
+    .n1
+        background-color: #ffb8b8
+        &>.button
+            background-color: #ffb8b8
+    .n2
+        background-color: #ebff77
+        &>.button
+            background-color: #ebff77
+            transform: translateY(20px)
+    .n3
+        background-color: #93ff93
+        &>.button
+            background-color: #93ff93
+            transform: translateY(40px)
+    .n4
+        background-color: #ca92ff
+        &>.button
+            background-color: #ca92ff
+            transform: translateY(60px)
+    .matrioshka
+        &:focus-within
+            // border-style: dotted
+            left: 0%
+            width: 100%
+            display: inline-block
+            .button
+                left: 0%
+                z-index: 2
+        &:focus
+            // border-style: dashed
+            left: 0%
+            width: 100%
+            display: inline-block
+            &>.button
+                /* left: 99% */
+                left: 0%
+                z-index: 1
+                /* display: none */
+        &:focus>.matrioshka
+            // border-style: solid
+            left: 100%
+            width: 0%
+            display: inline-block
+            .button
+                left: -40px
+                z-index: 2
+        &:focus>.matrioshka>.matrioshka
+            .button
+                z-index: -1
+    &>.matrioshka:focus
+        .button
+            left: 0%
+            z-index: -1
+
+
+.slider3 
+    overflow: visible
+    margin-top: 10px
+    position: relative
+    width: 100%
+    height: 200px
+    border-width: 3px
+    border-style: solid
+    .matrioshka
+        .button
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: -40px
+            width: 40px
+            height: 40px
+            background-color: #ff0000
+            border-width: 1px
+            border-style: solid
+            border-top-left-radius: 50%
+            border-bottom-left-radius: 50%
+        display: inline-block
+        /* display: none */
+        /* position: relative */
+        position: absolute
+        left: 100%;
+        top: 0
+        /* width: 100% */
+        width: 0%
+        height: 200px
+        .content
+            width: 90%
+            height: 100%
+    &>.matrioshka 
+        /* display: inline-block */
+        width: 100%
+        left: 0%
+        &>.button
+            left: 0%
+            z-index: -1
+        &>.matrioshka 
+            &>.button
+                left: -40px
+                z-index: 1
+            .matrioshka 
+                &>.button
+                    left: -40px
+                    z-index: -1
+    .n1
+        background-color: #ffb8b8
+        &>.button
+            background-color: #ffb8b8
+    .n2
+        background-color: #ebff77
+        &>.button
+            background-color: #ebff77
+            // transform: translateY(20px)
+    .n3
+        background-color: #93ff93
+        &>.button
+            background-color: #93ff93
+            // transform: translateY(40px)
+    .n4
+        background-color: #ca92ff
+        &>.button
+            background-color: #ca92ff
+            // transform: translateY(60px)
+    .n5
+        background-color: #f74ce8
+        &>.button
+            background-color: #f74ce8
+            // transform: translateY(80px)
+    .matrioshka.matrioshka.matrioshka.matrioshka
+        &:focus-within
+            // border-style: dotted
+            left: 0%
+            width: 100%
+            display: inline-block
+            &>.button
+                left: 0%
+                z-index: 2
+                transform: rotateZ(180deg)
+        &:focus
+            // border-style: dashed
+            left: 0% !important
+            width: 100%
+            display: inline-block
+            &>.button
+                /* left: 99% */
+                left: 0%
+                z-index: 1
+                transform: rotateZ(180deg)
+                /* display: none */
+        &:focus>.matrioshka
+            // border-style: solid
+            left: 100%
+            width: 0%
+            display: inline-block
+            &>.button
+                left: -40px
+                z-index: 2
+        &:focus>.matrioshka>.matrioshka
+            &>.button
+                z-index: -1
+                display: none
+    &.slider3.slider3.slider3>.matrioshka:focus
+        &>.button
+            left: 0%
+            z-index: -1
+            display: none
+
+
+.slider4 
+    overflow: visible
+    margin-top: 10px
+    position: relative
+    width: 100%
+    /* height: 200px */
+    border-width: 3px
+    border-style: solid
+    .container
+        height: 200px
+    .matrioshka
+        display: inline-block
+        /* display: none */
+        /* position: relative */
+        position: absolute
+        left: 100%;
+        top: 0
+        /* width: 100% */
+        width: 0%
+        height: 200px
+        .button
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: -40px
+            width: 40px
+            height: 40px
+            background-color: #ff0000
+            border-width: 1px
+            border-style: solid
+            border-top-left-radius: 50%
+            border-bottom-left-radius: 50%
+        .content
+            width: 90%
+            height: 100%
+    &>.container>.matrioshka 
+        /* display: inline-block */
+        width: 100%
+        left: 0%
+        &>.button
+            left: 0%
+            z-index: -1
+        &>.matrioshka 
+            &>.button
+                left: -40px
+                z-index: 1
+            .matrioshka 
+                &>.button
+                    left: -40px
+                    z-index: -1
+    .n1
+        background-color: #ffb8b8
+        &>.button
+            background-color: #ffb8b8
+    .n2
+        background-color: #ebff77
+        &>.button
+            background-color: #ebff77
+            // transform: translateY(20px)
+    .n3
+        background-color: #93ff93
+        &>.button
+            background-color: #93ff93
+            // transform: translateY(40px)
+    .n4
+        background-color: #ca92ff
+        &>.button
+            background-color: #ca92ff
+            // transform: translateY(60px)
+    .n5
+        background-color: #f74ce8
+        &>.button
+            background-color: #f74ce8
+            // transform: translateY(80px)
+    .matrioshka.matrioshka.matrioshka.matrioshka.matrioshka
+        &:focus-within
+            // border-style: dotted
+            left: 0%
+            width: 100%
+            display: inline-block
+            &>.button
+                left: 0%
+                z-index: 2
+                transform: rotateZ(180deg)
+        &:focus
+            // border-style: dashed
+            left: 0% !important
+            width: 100%
+            display: inline-block
+            &>.button
+                /* left: 99% */
+                left: 0%
+                z-index: 1
+                transform: rotateZ(180deg)
+                /* display: none */
+        &:focus>.matrioshka
+            // border-style: solid
+            left: 100%
+            width: 0%
+            display: inline-block
+            &>.button
+                left: -40px
+                z-index: 2
+        &:focus>.matrioshka>.matrioshka
+            &>.button
+                z-index: -1
+                display: none
+    &.slider4.slider4.slider4>.container>.matrioshka:focus
+        &>.button
+            left: 0%
+            z-index: -1
+            display: none
+    .labels
+        display: flex
+        justify-content: center;
+        height: 50px
+        label
+            width: 50px
+            height: 50px
+            border-style: solid
+            border-width: 2px
+            border-radius: 50%
+            &:focus
+                background-color: #ff0000
+    &:focus-within .labels
+        background-color: #2efa6c
+    button.formal 
+        position: absolute
+        width: 0
+        height: 0
+        border-width: 0
+        outline: none
+
+.tabs
+    margin-top: 10px
+    margin-bottom: 10px
+    width: 100%
+    height: 200px
+    border-style: solid
+    border-width: 2px
+    .labels
+        display: flex
+    label
+        /* height: 20px */
+        padding: 5px 10px
+        border-style: solid
+        border-width: 2px
+        border-bottom-width: 0px
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        font-size: 20px
+        &:focus-within
+            background-color: #ff0000
+        &:active
+            background-color: #ff0000
+    .bodies
+        position: relative
+        width: 100%
+        height: 100%
+        height: 166px
+    .tab
+        position: absolute
+        width: 100%
+        height: 100%
+        &:first-child
+            z-index: 2
+        &>button.formal 
+            position: absolute
+            width: 0
+            height: 0
+            border-width: 0
+            outline: none
+    .tab:focus-within
+        z-index: 3
+    
+
+.tabs2
+    margin-top: 10px
+    margin-bottom: 10px
+    width: 100%
+    height: 200px
+    border-style: solid
+    border-width: 2px
+    display: flex;
+    flex-direction: column;
+    .labels
+        height: 37px
+    .bodies
+        position: relative
+        flex: 1;
+        width: 100%
+        height: 100%
+        height: 166px
+        .tab
+            position: absolute
+            width: 100%
+            height: 100%
+            .label
+                position: absolute
+                cursor: default
+                cursor: pointer
+                /* height: 20px */
+                top: -30px
+                padding: 5px 10px
+                border-style: solid
+                border-width: 2px
+                border-bottom-width: 0px
+                border-top-left-radius: 10px
+                border-top-right-radius: 10px
+                font-size: 20px
+                background-color: inherit
+                /* offset-x | offset-y | blur-radius | spread-radius | color */
+                box-shadow: inset 0px -10px 5px 0px rgba(0, 0, 0, 0.4);
+                transform: skewX(-20deg) translateX(7px)
+                &:focus-within
+                    background-color: #ff0000
+                &:active
+                    background-color: #ff0000
+            &:first-child
+                z-index: 2
+            &:focus-within
+                z-index: 3
+                .label
+                    top: -35px
+                    box-shadow: unset
+                    transform: none
+            &:nth-child(1) .label
+                left: 0px
+                top: -35px
+                box-shadow: unset
+                transform: none
+            &:nth-child(2) .label
+                left: 105px
+            &:nth-child(3) .label
+                left: 151px
+            &:nth-child(4) .label
+                left: 228px
+            &:nth-child(5) .label
+                left: 284px
+        &:focus-within .tab:nth-child(1):not(:focus) .label
+            top: -30px
+            box-shadow: inset 0px -10px 5px 0px rgba(0, 0, 0, 0.4);
+            transform: skewX(-20deg) translateX(7px)
+
+
+/** .test3
+    margin-top: 10px
+    width: 200px
+    height: 100px
+    transform: skewX(-40deg)
+    border-style: solid
+    border-width: 2px
+    div
+        margin: 0 auto
+        transform: none
+        transform: skewX(40deg)
+        width: 70%
+        height: 100%
+        border-style: solid
+        border-width: 2px **/
+
+/** .test 
+    margin-top: 10px
+    // width: 100px
+    // height: 100px
+    background-color: #37bd5e;
+    div
+        position: relative
+        width: 80px
+        height: 80px
+        background-color: #e6c1c1;
+        border-top-left-radius: 70%
+        border-bottom-right-radius: 90%
+        border-bottom-left-radius: 33%
+        transform: translate(10px, 10px)
+        visibility: visible;
+        -webkit-animation: sk-rotateplane 1.5s infinite ease-in-out;
+        animation: sk-rotateplane 1.5s infinite ease-in-out;
+        &:focus
+            background-color: #faef8d;
+            transform: rotateX(180deg) rotateY(180deg);
+ **/
+
+
+/** @keyframes sk-rotateplane
+    0% 
+        // transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: scale(1) translate(100px, -600px) perspective(120px) rotateX(0deg) rotateY(0deg);
+    25% 
+        // transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: scale(1.5) translate(100px, -450px) perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    50% 
+        // transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: scale(2) translate(100px, -300px) perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    75% 
+        // transform: perspective(120px) rotateX(0deg) rotateY(-179.9deg);
+        -webkit-transform: scale(1.5) translate(100px, -150px) perspective(120px) rotateX(0deg) rotateY(-179.9deg);
+    100% 
+        // transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: scale(1) translate(100px, 10px) perspective(120px) rotateX(0deg) rotateY(-359.9deg);
+ **/
+
+    
+// height: calc(100% - 10px);
+
+
+

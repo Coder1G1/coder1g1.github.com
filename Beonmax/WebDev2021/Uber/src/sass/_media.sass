@@ -1,0 +1,36 @@
+@media (min-width: 768px) AND (max-width: 991px )
+    .promo
+        .col-md-5
+            padding-left: 0px
+        .col-md-3
+            padding-left: 0px
+        .col-md-2
+            padding-left: 0px
+            padding-right: 0px
+
+@media  (max-width: 575px )
+    header 
+        .activator
+            display: block
+            width: 40px
+            height: 40px
+        nav ul
+            position: fixed
+            flex-direction: column;
+            top: -73vh
+            /* left: -63vw */
+            width: 62vw;
+            height: 72vh;
+            background-color: $dark
+            transition: all 0.3s
+        &:focus-within nav ul
+            top: 0
+        nav ul:focus-within
+            top: -73vh
+
+@media ( min-width: 576px )
+    nav .activator
+            display: none
+    
+
+

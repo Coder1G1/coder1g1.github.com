@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(226, 223, 193);
+}
+h1, h2, h3 {
+    color: crimson;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+}
+.chapter {
+    color: darkblue;
+}
+#begin {
+    color: darkgreen;
+    font-weight: bold;
+}
+.text {
+    font-weight: 900;
+    color: rgb(124, 24, 102);
+}
+.box {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 20px;
+    background-color: rgb(33, 95, 14);
+    padding: 20px;
+  /*   border-width: 5px;
+    border-style: solid;
+    border-color: rgb(19, 18, 18, 1); */
+    border: 5px solid black;
+    border-radius: 20px;
+}
+.box_pos_test {
+    display: inline-block;
+    overflow: hidden;
+    /* padding: 10px; */
+    /* border: 5px none black; */
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 50px; height: 50px;
+
+}
