@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* overflow: hidden */
+    /* overflow: hidden */    // visible|hidden|scroll|auto|initial|inherit;
     /* transition: all 1s */
     
 .expander 
@@ -20,9 +20,12 @@
     .content
         overflow: hidden
         height: 0px
+        transition: height 1s
+        overflow: scroll
         // display: none
     &:focus-within .content
-        height: 150px
+        height: 100px
+        transition: height 1s
         // display: block
 
 .slider 
@@ -32,8 +35,8 @@
     height: 200px
     border-width: 3px
     border-style: solid
-    *
-        transition: all 1s
+    background-image: url(../img/p7.png)
+    background-size: 100% 100%
     .matrioshka
         /** button
             display: inline-block
@@ -67,12 +70,24 @@
         // transition: width 1s
         // transition: left 1s
         transition: left 1s, width 1s;
+        &>.content
+            background-image: url(../img/p1.png)
+            background-size: 100% 100%
     .n2
         background-color: #aec200
+        &>.content
+            background-image: url(../img/p2.png)
+            background-size: 100% 100%
     .n3
         background-color: #a3d487
+        &>.content
+            background-image: url(../img/p3.png)
+            background-size: 100% 100%
     .n4
         background-color: #8dc0c9
+        &>.content
+            background-image: url(../img/p4.png)
+            background-size: 100% 100%
     .matrioshka
         &:focus-within
             // border-style: dotted
@@ -98,8 +113,6 @@
             // transition: width 1s
             transition: left 1s, width 1s;
             display: inline-block
-
-// overflow: visible|hidden|scroll|auto|initial|inherit;
 
 .slider2 
     margin-top: 10px
@@ -210,18 +223,6 @@
     border-width: 3px
     border-style: solid
     .matrioshka
-        .button
-            display: inline-block
-            position: absolute
-            top: 50%
-            left: -40px
-            width: 40px
-            height: 40px
-            background-color: #ff0000
-            border-width: 1px
-            border-style: solid
-            border-top-left-radius: 50%
-            border-bottom-left-radius: 50%
         display: inline-block
         /* display: none */
         /* position: relative */
@@ -231,47 +232,83 @@
         /* width: 100% */
         width: 0%
         height: 200px
+        transition: left 1s, width 1s, transform 1s
+        .button
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: -40px
+            width: 40px
+            height: 40px
+            /* background-color: #ff0000 */
+            background-image: url(../icons/leftarrow.png)
+            // border-width: 1px
+            // border-style: solid
+            // border-top-left-radius: 50%
+            // border-bottom-left-radius: 50%
+            transition: left 1s, width 1s, transform 1s
         .content
-            width: 90%
+            width: 100%
             height: 100%
+            background-image: url(../img/p1.png)
     &>.matrioshka 
         /* display: inline-block */
         width: 100%
         left: 0%
+        transition: left 1s, width 1s, transform 1s
         &>.button
             left: 0%
             z-index: -1
+            transform: rotateZ(180deg)
+            transition: left 1s, width 1s, transform 1s
         &>.matrioshka 
             &>.button
                 left: -40px
                 z-index: 1
+                transition: left 1s, width 1s, transform 1s
             .matrioshka 
                 &>.button
                     left: -40px
                     z-index: -1
+                    transition: left 1s, width 1s, transform 1s
     .n1
         background-color: #ffb8b8
-        &>.button
-            background-color: #ffb8b8
+        &>.content
+            background-image: url(../img/p1.png)
+            background-size: 100% 100%
+        // &>.button
+            // background-color: #ffb8b8
     .n2
         background-color: #ebff77
-        &>.button
-            background-color: #ebff77
+        &>.content
+            background-image: url(../img/p2.png)
+            background-size: 100% 100%
+        // &>.button
+            // background-color: #ebff77
             // transform: translateY(20px)
     .n3
         background-color: #93ff93
-        &>.button
-            background-color: #93ff93
+        &>.content
+            background-image: url(../img/p3.png)
+            background-size: 100% 100%
+        // &>.button
+            // background-color: #93ff93
             // transform: translateY(40px)
     .n4
         background-color: #ca92ff
-        &>.button
-            background-color: #ca92ff
+        &>.content
+            background-image: url(../img/p4.png)
+            background-size: 100% 100%
+        // &>.button
+            // background-color: #ca92ff
             // transform: translateY(60px)
     .n5
         background-color: #f74ce8
-        &>.button
-            background-color: #f74ce8
+        &>.content
+            background-image: url(../img/p5.png)
+            background-size: 100% 100%
+        // &>.button
+            // background-color: #f74ce8
             // transform: translateY(80px)
     .matrioshka.matrioshka.matrioshka.matrioshka
         &:focus-within
@@ -279,29 +316,35 @@
             left: 0%
             width: 100%
             display: inline-block
+            transition: left 1s, width 1s, transform 1s
             &>.button
                 left: 0%
                 z-index: 2
                 transform: rotateZ(180deg)
+                transition: left 1s, width 1s, transform 1s
         &:focus
             // border-style: dashed
             left: 0% !important
             width: 100%
             display: inline-block
+            transition: left 1s, width 1s, transform 1s
             &>.button
                 /* left: 99% */
                 left: 0%
                 z-index: 1
                 transform: rotateZ(180deg)
+                transition: left 1s, width 1s, transform 1s
                 /* display: none */
         &:focus>.matrioshka
             // border-style: solid
             left: 100%
             width: 0%
             display: inline-block
+            transition: left 1s, width 1s, transform 1s
             &>.button
                 left: -40px
                 z-index: 2
+                transition: left 1s, width 1s, transform 1s
         &:focus>.matrioshka>.matrioshka
             &>.button
                 z-index: -1
@@ -311,6 +354,7 @@
             left: 0%
             z-index: -1
             display: none
+            transition: left 1s, width 1s, transform 1s
 
 
 .slider4 
@@ -491,7 +535,7 @@
 
 .tabs2
     overflow: hidden
-    margin-top: 10px
+    margin-top: 30px
     margin-bottom: 10px
     width: 100%
     height: 200px
