@@ -352,6 +352,11 @@ template {
   padding: 0;
 }
 
+body {
+  /* width: fit-content; */
+  min-width: fit-content;
+}
+
 .band {
   /* position: relative; */
   /* border: 3px dotted; */
