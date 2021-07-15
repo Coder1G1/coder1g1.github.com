@@ -1,0 +1,241 @@
+
+$excelling-color: #FFA501
+    
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+* 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500
+    font-size: 14px
+    margin: 0;
+    padding: 0;
+
+// @import '_test';
+
+.band
+    /* position: relative; */
+    /* border: 3px dotted; */
+    width: 1140px
+    margin: 0 auto
+
+h1
+    font-weight: 700
+    font-size: 48px;
+    line-height: 60px;
+
+h2
+    font-weight: 700
+    font-size: 36px;
+    line-height: 60px;
+
+h3
+    font-weight: 700
+    font-size: 20px;
+    line-height: 30px;
+
+h4
+    font-weight: 700
+    font-size: 16px;
+    line-height: 24px;
+
+h5
+    font-weight: 700
+    font-size: 14px;
+    line-height: 21px;
+
+.disk-decored
+    position: relative
+    z-index: 2;
+    &:before
+        content: ""
+        display: block
+        position: absolute
+        z-index: -1;
+        width: 36px;
+        height: 36px;
+        background: $excelling-color
+        border-radius: 50%
+        left: -5px;
+        top: -8px;
+
+.icon-disk-decored 
+    position: relative
+    z-index: 2;
+    top: 10px
+    /* width: 36px */
+    padding-top: 10px
+    &:before
+        content: ""
+        display: block
+        position: absolute
+        z-index: -1;
+        width: 36px;
+        height: 36px;
+        background: $excelling-color
+        border-radius: 50%
+        left: -5px;
+        top: -8px;
+    img
+        margin-top: -10px
+        margin-left: 13px
+        width: 25px
+        height: 25px
+
+button
+    width: 135px;
+    height: 45px;
+    background: $excelling-color
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 12px 25px
+    border: none
+    font-weight: 700
+
+.transparent
+    background-color: transparent
+    // &:hover
+        // background-color: $excelling-color //inherit
+
+hr.excelling
+    width: 60px
+    border: 2px solid $excelling-color
+
+.inline-block-center
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    &::after
+        /* content: "<br>" */
+
+//=================================
+
+.first-screen-banner
+    width: 100%
+    // background: 
+    // background-attachment:  //fixed | scroll | inherit
+    background-clip: padding-box //padding-box | border-box | content-box
+    background-color: #80e5ec //<цвет> | transparent | inherit
+    background-image: url(../img/main_bg.jpg) // url() | none | inherit
+    background-origin: padding-box //padding-box | border-box | content-box
+    // background-position: 
+    background-position-x: center //left | center | right | <проценты> | <значение>
+    // background-position-y:  //top | center | bottom | проценты | значение
+    background-repeat: no-repeat //no-repeat | repeat | repeat-x | repeat-y | inherit
+    // background-size: cover // ([ <значение> | <проценты> | auto ] [ <значение> | <проценты> | auto ]) | cover | contain
+    .band
+        position: relative;
+        /* border: 3px dotted; */
+        /* height: 100vh */
+        /* max-height: 800px */
+        height: 800px
+        .menu-activator
+            height: 50px
+            font-weight: 700
+            font-size: 48px; 
+            line-height: 40px;
+            cursor: pointer;
+            &:hover
+                background-color: $excelling-color
+        h4.disk-decored
+            margin-top: 156px
+        h1
+            margin-top: 10px
+        .buttons
+            margin-top: 25px
+        .social
+            display: flex
+            align-items: center;
+            position: absolute;
+            bottom: 0px;
+            .text
+                display: inline-block;
+            .line
+                width: 50px
+                height: 1px
+                margin: 0 10px
+                border-top: 1px solid #000000
+                display: inline-block;
+            a
+                display: inline-block;
+                img
+                    display: inline-block;
+                    margin: 0 3px
+                    transform: rotateZ(90deg)
+
+.about-me
+    padding-top: 120px
+    .band
+        display: flex
+        &>img
+            width: 400px;
+            height: 600px;
+        .info
+            padding-left: 70px
+            &>h4
+                margin-top: 5px
+            &>h2
+                margin-top: 7px
+            p
+                margin-top: 20px
+                padding-right: 50px
+            .branches
+                display: flex
+                flex-wrap: wrap
+                margin-top: 40px
+                .card
+                    width: 50%
+                    display: flex
+                    padding-bottom: 40px
+                    .text-block
+                        /* width: 170px */
+                        padding-left: 20px
+                        padding-right: 50px
+                        .text
+                            // font-weight: 500;
+                            font-size: 12px;
+                            line-height: 18px;
+
+.background
+    padding-top: 80px
+    .band
+        position: relative
+        >hr
+            margin-top: 25px
+        .info-block
+            display: flex
+            margin-top: 60px
+            >div
+                display: flex
+                width: 50%
+                .lines
+                    /* display: inline-block */
+                    width: 60px
+                    border-right: 1px solid
+                    flex-shrink: 0
+                .info
+                    /* display: inline-block */
+                    flex-grow: 1
+                    margin-right: 80px
+                    >h3
+                        padding-left: 43px
+                    .article
+                        .header
+                            display: flex
+                            align-items: center
+                            .horizontal-line
+                                width: 50px
+                                border-top: 1px solid
+                            .captions
+                                margin-left: 20px
+                                >h5
+                                    margin-bottom: 0
+                                .subcaption
+                                    font-size: 12px
+                        p
+                            margin-top: 12px
+                            padding-left: 43px
+                            font-size: 12px
+                            // font-weight: 700
+
+.skills
+    padding-top: 130px

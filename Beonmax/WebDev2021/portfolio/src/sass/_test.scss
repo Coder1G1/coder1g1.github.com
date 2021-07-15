@@ -1,0 +1,31 @@
+html {
+    /* min-width: 100vw ; */
+    background-color: #ff5100 ;
+    }
+
+body {
+    /* min-width: 100vw ; */
+    background-color: #545555 ;
+    }
+
+.test {
+    display: block ;
+    width: 100vw ;
+    max-width: 1140px ;
+    margin: 0 auto ;
+    background-color: #aaaaaa ;
+    }
+
+.test div {
+    width: 50vh ;
+    height: 50vh ;
+    background-color: #faa6a6 ;
+    }
+
+.test2 {
+    width: MIN(100vw, 1000px, 200vh) ;
+    /* width: 80vh; */
+    height: MIN(500px, 50vw, 100vh) ;
+    /* height: 80vh; */
+    background-color: #6ed3a1 ;
+    }
