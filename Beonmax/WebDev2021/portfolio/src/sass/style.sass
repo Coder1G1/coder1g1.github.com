@@ -59,10 +59,26 @@ h5
         left: -5px;
         top: -8px;
 
+.disk-center-decored     
+    position: relative
+    z-index: 2;
+    &:before
+        content: ""
+        display: block
+        position: absolute
+        z-index: -1;
+        width: 36px;
+        height: 36px;
+        background: $excelling-color
+        border-radius: 50%
+        top: -8px;
+        left: 50%
+        transform: translateX(-50%)
+
 .icon-disk-decored 
     position: relative
     z-index: 2;
-    top: 10px
+    top: 5px
     /* width: 36px */
     padding-top: 10px
     &:before
@@ -239,3 +255,61 @@ hr.excelling
 
 .skills
     padding-top: 130px
+    .band
+        .technologies
+            display: flex
+            // display: grid
+            flex-wrap: wrap
+            justify-content: start
+            justify-items: start
+            margin-top: 60px
+            margin-left: auto
+            margin-right: auto
+            .card
+                width: 270px
+                height: 270px
+                margin: 7px
+                border: 1px solid
+                padding: 20px 30px
+                .img-wrapper
+                    display: flex
+                    height: 85px
+                    >img
+                        align-self: center
+                p
+                    margin-top: 8px
+                    font-size: 12px
+        .skill-levels
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-top: 90px
+            .card
+                display: flex
+                flex-wrap: wrap
+                width: 30%
+                height: 70px
+                margin-top: 30px
+                .caption
+                    display: inline-block
+                    // margin-right: auto
+                .percent
+                    display: inline-block
+                    margin-left: auto
+                .bar-background
+                    width: 100%
+                    height: 14px
+                    background-color: #d4d4d4
+                    border-radius: 3px
+                .bar-foreground
+                    height: 14px
+                    background-color: $excelling-color
+                    border-radius: 3px
+
+.portfolio
+    .band
+        padding-top: 110px
+
+
+
+

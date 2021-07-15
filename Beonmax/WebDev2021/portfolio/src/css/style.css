@@ -407,10 +407,29 @@ h5 {
   top: -8px;
 }
 
+.disk-center-decored {
+  position: relative;
+  z-index: 2;
+}
+
+.disk-center-decored:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 36px;
+  height: 36px;
+  background: #FFA501;
+  border-radius: 50%;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .icon-disk-decored {
   position: relative;
   z-index: 2;
-  top: 10px;
+  top: 5px;
   /* width: 36px */
   padding-top: 10px;
 }
@@ -657,5 +676,78 @@ hr.excelling {
 
 .skills {
   padding-top: 130px;
+}
+
+.skills .band .technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  justify-items: start;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills .band .technologies .card {
+  width: 270px;
+  height: 270px;
+  margin: 7px;
+  border: 1px solid;
+  padding: 20px 30px;
+}
+
+.skills .band .technologies .card .img-wrapper {
+  display: flex;
+  height: 85px;
+}
+
+.skills .band .technologies .card .img-wrapper > img {
+  align-self: center;
+}
+
+.skills .band .technologies .card p {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.skills .band .skill-levels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+
+.skills .band .skill-levels .card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+  height: 70px;
+  margin-top: 30px;
+}
+
+.skills .band .skill-levels .card .caption {
+  display: inline-block;
+}
+
+.skills .band .skill-levels .card .percent {
+  display: inline-block;
+  margin-left: auto;
+}
+
+.skills .band .skill-levels .card .bar-background {
+  width: 100%;
+  height: 14px;
+  background-color: #d4d4d4;
+  border-radius: 3px;
+}
+
+.skills .band .skill-levels .card .bar-foreground {
+  height: 14px;
+  background-color: #FFA501;
+  border-radius: 3px;
+}
+
+.portfolio .band {
+  padding-top: 110px;
 }
 /*# sourceMappingURL=style.css.map */
