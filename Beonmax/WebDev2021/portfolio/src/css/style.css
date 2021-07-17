@@ -394,12 +394,12 @@ h5 {
   line-height: 21px;
 }
 
-.disk-decored {
+.disk-decored, .disk-center-decored, .icon-disk-decored {
   position: relative;
   z-index: 2;
 }
 
-.disk-decored:before {
+.disk-decored:before, .disk-center-decored:before, .icon-disk-decored:before {
   content: "";
   display: block;
   position: absolute;
@@ -412,44 +412,16 @@ h5 {
   top: -8px;
 }
 
-.disk-center-decored {
-  position: relative;
-  z-index: 2;
-}
-
 .disk-center-decored:before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 36px;
-  height: 36px;
-  background: #FFA501;
-  border-radius: 50%;
   top: -8px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .icon-disk-decored {
-  position: relative;
-  z-index: 2;
   top: 5px;
   /* width: 36px */
   padding-top: 10px;
-}
-
-.icon-disk-decored:before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 36px;
-  height: 36px;
-  background: #FFA501;
-  border-radius: 50%;
-  left: -5px;
-  top: -8px;
 }
 
 .icon-disk-decored img {
@@ -482,10 +454,6 @@ hr.excelling {
   display: inline-block;
   margin-left: 50%;
   transform: translateX(-50%);
-}
-
-.inline-block-center::after {
-  /* content: "<br>" */
 }
 
 .first-screen-banner {
@@ -635,10 +603,20 @@ hr.excelling {
 }
 
 .background .band .info-block > div .lines {
+  position: relative;
   /* display: inline-block */
   width: 60px;
   border-right: 1px solid;
   flex-shrink: 0;
+}
+
+.background .band .info-block > div .lines div {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #FFA501;
+  border-radius: 50%;
+  right: -13px;
 }
 
 .background .band .info-block > div .info {
@@ -754,5 +732,184 @@ hr.excelling {
 
 .portfolio .band {
   padding-top: 110px;
+}
+
+.portfolio .band .tiles {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: 285px 285px;
+  grid-gap: 10px;
+  grid-auto-rows: 285px;
+}
+
+.portfolio .band .tiles .tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio .band .tiles .uber {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.portfolio .band .tiles .puls {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.portfolio .band .tiles .bread {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.portfolio .band .tiles .mockup {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+.portfolio .band .tiles .mobile {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.portfolio .band .tiles .pharos {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+.prices .band {
+  padding-top: 66px;
+}
+
+.prices .price-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.prices .price-cards .card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 42%;
+  padding: 8px 50px;
+}
+
+.prices .price-cards .card .disk {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FFA501;
+}
+
+.prices .price-cards .card .caption {
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.prices .price-cards .card .price {
+  margin-left: auto;
+  margin-bottom: 0;
+}
+
+.prices .price-cards .card .text {
+  margin-top: 2px;
+  margin-left: 30px;
+  font-size: 12px;
+}
+
+.contacts .band {
+  padding-top: 120px;
+  padding-left: 50px;
+  padding-bottom: 90px;
+  padding-right: 35px;
+  display: flex;
+  align-items: stretch;
+}
+
+.contacts .band > img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.contacts .band .info {
+  display: inline-block;
+  padding-left: 68px;
+  width: 100%;
+}
+
+.contacts .band .info h4 {
+  margin-top: 8px;
+}
+
+.contacts .band .info h2 {
+  margin-bottom: 0;
+}
+
+.contacts .band .info h5 {
+  margin-top: 20px;
+}
+
+.contacts .band .info .social-icons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.contacts .band .info .social-icons > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+}
+
+.contacts .band .info .form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contacts .band .info .form .field {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  padding-top: 10px;
+}
+
+.contacts .band .info .form .field .caption {
+  position: absolute;
+  padding: 0px 10px;
+  top: -11px;
+  left: 10px;
+  background-color: #fff;
+}
+
+.contacts .band .info .form .field input {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.contacts .band .info .form .name {
+  width: 48%;
+  height: 45px;
+}
+
+.contacts .band .info .form .mail {
+  width: 48%;
+  height: 45px;
+  margin-left: auto;
+}
+
+.contacts .band .info .form .message {
+  width: 100%;
+  height: 190px;
+}
+
+.contacts .band .info .form button {
+  margin-top: 20px;
+  width: auto;
 }
 /*# sourceMappingURL=style.css.map */
