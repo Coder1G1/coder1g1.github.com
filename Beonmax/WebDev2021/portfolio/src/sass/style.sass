@@ -164,8 +164,11 @@ hr.excelling
     .band
         display: flex
         &>img
-            width: 400px;
+            // width: 400px;
+            width: 35%
             height: 600px;
+            /* height: 100% */
+            object-fit: cover;
         .info
             padding-left: 70px
             &>h4
@@ -181,6 +184,7 @@ hr.excelling
                 margin-top: 40px
                 .card
                     width: 50%
+                    // width: 335px
                     display: flex
                     padding-bottom: 40px
                     .text-block
@@ -369,8 +373,10 @@ hr.excelling
         display: flex
         align-items: stretch;
         >img
-            width: 400px
-            height: 600px
+            // width: 400px;
+            width: 35%
+            height: 600px;
+            /* height: 100% */
             object-fit: cover;
         .info
             display: inline-block;
@@ -409,6 +415,14 @@ hr.excelling
                         width: 100%;
                         height: 100%;
                         border: none;
+                        outline: none;
+                    textarea
+                        width: 100%;
+                        height: 100%;
+                        padding-left: 6px;
+                        border: none;
+                        resize: none;
+                        outline: none;
                 .name
                     width: 48%
                     height: 45px
@@ -425,4 +439,43 @@ hr.excelling
 
 
 
+//0, 576px, 768px, 992px, 1200px, 1400px
+//@media (min-width: 768px) AND (max-width: 991px )
+@media ( max-width: 1199px )
+    .band
+        width: 960px
+
+
+@media ( max-width: 991px )
+    .band
+        width: 720px
+    .about-me
+        .band
+            .info
+                .branches
+                    .card
+                        width: 100%
+
+
+
+@media ( max-width: 767px )
+    .band
+        width: 540px
+    
+
+@media ( max-width: 575px )
+    .band
+        width: 100%
+    .about-me
+        .band
+            flex-wrap: wrap
+            .info-block
+                flex-wrap: wrap;
+            &>img
+                // width: 400px;
+                width: 100%
+                height: 600px;
+                max-height: 600px;
+
+    
 
