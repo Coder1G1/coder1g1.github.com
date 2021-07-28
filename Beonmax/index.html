@@ -2,21 +2,36 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
 	<title>Заготовка</title>
 	<meta name="description" content="Описание (для поисковиков).">
 	<meta name="keywords" content="слово, другое, третье слово">
 	<style type="text/css">
 		* {
 			margin: 0; }
-		html body * {
-			line-height: 36px;
-			font-size: 24px ; }
+		html * {
+			line-height: 40px;
+			font-size: 28px ; }
 		html body pre {
 			padding: 8px; }
 		html body a {
 			text-decoration-line: none; }
 		html body a:hover {
 			text-decoration-line: underline; }
+		@media ( max-width: 575px ) {
+			html * {
+				font-size: 20px ; }
+			}
+		.mdw320, .mw320 {
+			display: none; }
+		@media ( max-device-width: 320px ) {
+			.mdw320 {
+				display: block ; }
+			}
+		@media ( max-width: 320px ) {
+			.mw320 {
+				display: block ; }
+			}
 	</style>
 </head>
 <body>
@@ -29,5 +44,7 @@ Beonmax/ WebDev2021/ :
 tests/ :
 <a href="tests/index.html"           >  index.html</a>
 </pre>
+<div class="mdw320">max-device-width: 320px</div>
+<div  class="mw320">max-width: 320px</div>
 </body>
 </html>
