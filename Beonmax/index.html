@@ -22,7 +22,7 @@
 			html * {
 				font-size: 20px ; }
 			}
-		.mdw320, .mw320 {
+		.mdw320, .mw320, .mdw480, .mw480 {
 			display: none; }
 		@media ( max-device-width: 320px ) {
 			.mdw320 {
@@ -30,6 +30,10 @@
 			}
 		@media ( max-width: 320px ) {
 			.mw320 {
+				display: block ; }
+			}
+		@media ( max-device-width: 480px ) {
+			.mdw480 {
 				display: block ; }
 			}
 		@media ( max-width: 480px ) {
@@ -50,6 +54,7 @@ tests/ :
 </pre>
 <div class="mdw320">max-device-width: 320px</div>
 <div  class="mw320">max-width: 320px</div>
+<div class="mdw480">max-device-width: 480px</div>
 <div  class="mw480">max-width: 480px</div>
 </body>
 </html>
